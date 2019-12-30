@@ -526,7 +526,7 @@ void NsGenMacAddress(void *dest, char *mac_address_seed, char *device_name)
 	Zero(tmp, sizeof(tmp));
 
 	StrCat(tmp, sizeof(tmp), mac_address_seed);
-	StrCat(tmp, sizeof(tmp), "@");
+	StrCat(tmp, sizeof(tmp), "@55");
 	StrCat(tmp, sizeof(tmp), device_name);
 
 	Trim(tmp);
