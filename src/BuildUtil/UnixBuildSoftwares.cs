@@ -1,78 +1,69 @@
 // SoftEther VPN Source Code - Stable Edition Repository
 // Build Utility
 // 
-// SoftEther VPN Server, Client and Bridge are free software under GPLv2.
+// SoftEther VPN Server, Client and Bridge are free software under the Apache License, Version 2.0.
 // 
 // Copyright (c) Daiyuu Nobori.
 // Copyright (c) SoftEther VPN Project, University of Tsukuba, Japan.
 // Copyright (c) SoftEther Corporation.
+// Copyright (c) all contributors on SoftEther VPN project in GitHub.
 // 
 // All Rights Reserved.
 // 
 // http://www.softether.org/
 // 
-// Author: Daiyuu Nobori, Ph.D.
-// Comments: Tetsuo Sugiyama, Ph.D.
+// This stable branch is officially managed by Daiyuu Nobori, the owner of SoftEther VPN Project.
+// Pull requests should be sent to the Developer Edition Master Repository on https://github.com/SoftEtherVPN/SoftEtherVPN
 // 
-// This program is free software; you can redistribute it and/or
-// modify it under the terms of the GNU General Public License
-// version 2 as published by the Free Software Foundation.
+// License: The Apache License, Version 2.0
+// https://www.apache.org/licenses/LICENSE-2.0
 // 
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-// GNU General Public License for more details.
+// DISCLAIMER
+// ==========
 // 
-// You should have received a copy of the GNU General Public License version 2
-// along with this program; if not, write to the Free Software
-// Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
 // 
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-// EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-// IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-// CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-// TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-// SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+// THIS SOFTWARE IS DEVELOPED IN JAPAN, AND DISTRIBUTED FROM JAPAN, UNDER
+// JAPANESE LAWS. YOU MUST AGREE IN ADVANCE TO USE, COPY, MODIFY, MERGE, PUBLISH,
+// DISTRIBUTE, SUBLICENSE, AND/OR SELL COPIES OF THIS SOFTWARE, THAT ANY
+// JURIDICAL DISPUTES WHICH ARE CONCERNED TO THIS SOFTWARE OR ITS CONTENTS,
+// AGAINST US (SOFTETHER PROJECT, SOFTETHER CORPORATION, DAIYUU NOBORI OR OTHER
+// SUPPLIERS), OR ANY JURIDICAL DISPUTES AGAINST US WHICH ARE CAUSED BY ANY KIND
+// OF USING, COPYING, MODIFYING, MERGING, PUBLISHING, DISTRIBUTING, SUBLICENSING,
+// AND/OR SELLING COPIES OF THIS SOFTWARE SHALL BE REGARDED AS BE CONSTRUED AND
+// CONTROLLED BY JAPANESE LAWS, AND YOU MUST FURTHER CONSENT TO EXCLUSIVE
+// JURISDICTION AND VENUE IN THE COURTS SITTING IN TOKYO, JAPAN. YOU MUST WAIVE
+// ALL DEFENSES OF LACK OF PERSONAL JURISDICTION AND FORUM NON CONVENIENS.
+// PROCESS MAY BE SERVED ON EITHER PARTY IN THE MANNER AUTHORIZED BY APPLICABLE
+// LAW OR COURT RULE.
 // 
-// THE LICENSE AGREEMENT IS ATTACHED ON THE SOURCE-CODE PACKAGE
-// AS "LICENSE.TXT" FILE. READ THE TEXT FILE IN ADVANCE TO USE THE SOFTWARE.
+// USE ONLY IN JAPAN. DO NOT USE THIS SOFTWARE IN ANOTHER COUNTRY UNLESS YOU HAVE
+// A CONFIRMATION THAT THIS SOFTWARE DOES NOT VIOLATE ANY CRIMINAL LAWS OR CIVIL
+// RIGHTS IN THAT PARTICULAR COUNTRY. USING THIS SOFTWARE IN OTHER COUNTRIES IS
+// COMPLETELY AT YOUR OWN RISK. THE SOFTETHER VPN PROJECT HAS DEVELOPED AND
+// DISTRIBUTED THIS SOFTWARE TO COMPLY ONLY WITH THE JAPANESE LAWS AND EXISTING
+// CIVIL RIGHTS INCLUDING PATENTS WHICH ARE SUBJECTS APPLY IN JAPAN. OTHER
+// COUNTRIES' LAWS OR CIVIL RIGHTS ARE NONE OF OUR CONCERNS NOR RESPONSIBILITIES.
+// WE HAVE NEVER INVESTIGATED ANY CRIMINAL REGULATIONS, CIVIL LAWS OR
+// INTELLECTUAL PROPERTY RIGHTS INCLUDING PATENTS IN ANY OF OTHER 200+ COUNTRIES
+// AND TERRITORIES. BY NATURE, THERE ARE 200+ REGIONS IN THE WORLD, WITH
+// DIFFERENT LAWS. IT IS IMPOSSIBLE TO VERIFY EVERY COUNTRIES' LAWS, REGULATIONS
+// AND CIVIL RIGHTS TO MAKE THE SOFTWARE COMPLY WITH ALL COUNTRIES' LAWS BY THE
+// PROJECT. EVEN IF YOU WILL BE SUED BY A PRIVATE ENTITY OR BE DAMAGED BY A
+// PUBLIC SERVANT IN YOUR COUNTRY, THE DEVELOPERS OF THIS SOFTWARE WILL NEVER BE
+// LIABLE TO RECOVER OR COMPENSATE SUCH DAMAGES, CRIMINAL OR CIVIL
+// RESPONSIBILITIES. NOTE THAT THIS LINE IS NOT LICENSE RESTRICTION BUT JUST A
+// STATEMENT FOR WARNING AND DISCLAIMER.
 // 
-// 
-// THIS SOFTWARE IS DEVELOPED IN JAPAN, AND DISTRIBUTED FROM JAPAN,
-// UNDER JAPANESE LAWS. YOU MUST AGREE IN ADVANCE TO USE, COPY, MODIFY,
-// MERGE, PUBLISH, DISTRIBUTE, SUBLICENSE, AND/OR SELL COPIES OF THIS
-// SOFTWARE, THAT ANY JURIDICAL DISPUTES WHICH ARE CONCERNED TO THIS
-// SOFTWARE OR ITS CONTENTS, AGAINST US (SOFTETHER PROJECT, SOFTETHER
-// CORPORATION, DAIYUU NOBORI OR OTHER SUPPLIERS), OR ANY JURIDICAL
-// DISPUTES AGAINST US WHICH ARE CAUSED BY ANY KIND OF USING, COPYING,
-// MODIFYING, MERGING, PUBLISHING, DISTRIBUTING, SUBLICENSING, AND/OR
-// SELLING COPIES OF THIS SOFTWARE SHALL BE REGARDED AS BE CONSTRUED AND
-// CONTROLLED BY JAPANESE LAWS, AND YOU MUST FURTHER CONSENT TO
-// EXCLUSIVE JURISDICTION AND VENUE IN THE COURTS SITTING IN TOKYO,
-// JAPAN. YOU MUST WAIVE ALL DEFENSES OF LACK OF PERSONAL JURISDICTION
-// AND FORUM NON CONVENIENS. PROCESS MAY BE SERVED ON EITHER PARTY IN
-// THE MANNER AUTHORIZED BY APPLICABLE LAW OR COURT RULE.
-// 
-// USE ONLY IN JAPAN. DO NOT USE THIS SOFTWARE IN ANOTHER COUNTRY UNLESS
-// YOU HAVE A CONFIRMATION THAT THIS SOFTWARE DOES NOT VIOLATE ANY
-// CRIMINAL LAWS OR CIVIL RIGHTS IN THAT PARTICULAR COUNTRY. USING THIS
-// SOFTWARE IN OTHER COUNTRIES IS COMPLETELY AT YOUR OWN RISK. THE
-// SOFTETHER VPN PROJECT HAS DEVELOPED AND DISTRIBUTED THIS SOFTWARE TO
-// COMPLY ONLY WITH THE JAPANESE LAWS AND EXISTING CIVIL RIGHTS INCLUDING
-// PATENTS WHICH ARE SUBJECTS APPLY IN JAPAN. OTHER COUNTRIES' LAWS OR
-// CIVIL RIGHTS ARE NONE OF OUR CONCERNS NOR RESPONSIBILITIES. WE HAVE
-// NEVER INVESTIGATED ANY CRIMINAL REGULATIONS, CIVIL LAWS OR
-// INTELLECTUAL PROPERTY RIGHTS INCLUDING PATENTS IN ANY OF OTHER 200+
-// COUNTRIES AND TERRITORIES. BY NATURE, THERE ARE 200+ REGIONS IN THE
-// WORLD, WITH DIFFERENT LAWS. IT IS IMPOSSIBLE TO VERIFY EVERY
-// COUNTRIES' LAWS, REGULATIONS AND CIVIL RIGHTS TO MAKE THE SOFTWARE
-// COMPLY WITH ALL COUNTRIES' LAWS BY THE PROJECT. EVEN IF YOU WILL BE
-// SUED BY A PRIVATE ENTITY OR BE DAMAGED BY A PUBLIC SERVANT IN YOUR
-// COUNTRY, THE DEVELOPERS OF THIS SOFTWARE WILL NEVER BE LIABLE TO
-// RECOVER OR COMPENSATE SUCH DAMAGES, CRIMINAL OR CIVIL
-// RESPONSIBILITIES. NOTE THAT THIS LINE IS NOT LICENSE RESTRICTION BUT
-// JUST A STATEMENT FOR WARNING AND DISCLAIMER.
+// READ AND UNDERSTAND THE 'WARNING.TXT' FILE BEFORE USING THIS SOFTWARE.
+// SOME SOFTWARE PROGRAMS FROM THIRD PARTIES ARE INCLUDED ON THIS SOFTWARE WITH
+// LICENSE CONDITIONS WHICH ARE DESCRIBED ON THE 'THIRD_PARTY.TXT' FILE.
 // 
 // 
 // SOURCE CODE CONTRIBUTION
@@ -630,6 +621,8 @@ namespace BuildUtil
 			sr.WriteLine("# Platform: {0}", this.CrossLibName);
 			sr.WriteLine();
 			sr.WriteLine("CC={0}", this.Compiler);
+			sr.WriteLine();
+			sr.WriteLine();
 			sr.WriteLine("OPTIONS={0}", gccOptionForLink);
 			sr.WriteLine();
 			sr.WriteLine("default:");
@@ -649,9 +642,11 @@ namespace BuildUtil
 			}
 
 			sr.WriteLine("\t-ranlib code/{0}.a", this.Software.ToString());
+
 			sr.WriteLine("\t$(CC) code/{0}.a $(OPTIONS) -o {0}", this.Software.ToString());
 
 			sr.WriteLine("\t-ranlib code/{0}.a", "vpncmd");
+
 			sr.WriteLine("\t$(CC) code/{0}.a $(OPTIONS) -o {0}", "vpncmd");
 
 			if (this.Software == Software.vpnserver_vpnbridge || this.Software == Software.vpnbridge || this.Software == Software.vpnserver)
@@ -680,6 +675,9 @@ namespace BuildUtil
 
 			sr.WriteLine("\t@echo");
 			sr.WriteLine("\t@echo");
+			sr.WriteLine("\t@echo \"Note: the administrative password is not set on the VPN Server. Please set your own administrative password as soon as possible by vpncmd or the GUI manager.\"");
+			sr.WriteLine("\t@echo");
+			sr.WriteLine("\t@echo");
 
 			sr.WriteLine("\t@echo \"*** How to start the {0} Service ***\"", BuildHelper.GetSoftwareTitle(this.Software));
 			sr.WriteLine("\t@echo");
@@ -691,6 +689,7 @@ namespace BuildUtil
 			sr.WriteLine("\t@echo \"And please execute './vpncmd' to run the SoftEther VPN Command-Line Utility to configure {0}.\"", BuildHelper.GetSoftwareTitle(this.Software));
 #endif
 			sr.WriteLine("\t@echo");
+
 #if !BU_SOFTETHER
 			sr.WriteLine("\t@echo \"Of course, you can use the VPN Server Manager GUI Application for Windows on the other Windows PC in order to configure the {0} remotely.\"", BuildHelper.GetSoftwareTitle(this.Software));
 #else
@@ -699,7 +698,6 @@ namespace BuildUtil
 
 #if !BU_SOFTETHER
 #else
-			sr.WriteLine("\t@echo");
 			sr.WriteLine("\t@echo");
 			sr.WriteLine("\t@echo \"*** For Windows users ***\"");
 			sr.WriteLine("\t@echo \"You can download the SoftEther VPN Server Manager for Windows\"");
@@ -714,6 +712,30 @@ namespace BuildUtil
 			sr.WriteLine("\t@echo");
 #endif
 
+			sr.WriteLine("\t@echo");
+
+			sr.WriteLine("\t@echo");
+#if !BU_SOFTETHER
+			sr.WriteLine("\t@echo \"*** SoftEther VPN Server HTML5 Web Administration Console (NEW) ***\"");
+#else
+			sr.WriteLine("\t@echo \"*** PacketiX VPN Server HTML5 Web Administration Console (NEW) ***\"");
+#endif
+			sr.WriteLine("\t@echo \"This VPN Server / Bridge has the built-in HTML5 Web Administration Console.\"");
+			sr.WriteLine("\t@echo");
+			sr.WriteLine("\t@echo \"After you start the server daemon, you can open the HTML5 Web Administration Console is available at\"");
+			sr.WriteLine("\t@echo");
+#if !BU_SOFTETHER
+			sr.WriteLine("\t@echo \"https://127.0.0.1:8888/\"");
+			sr.WriteLine("\t@echo \"  or\"");
+			sr.WriteLine("\t@echo \"https://ip_address_of_the_vpn_server:8888/\"");
+#else
+			sr.WriteLine("\t@echo \"https://127.0.0.1:5555/\"");
+			sr.WriteLine("\t@echo \"or\"");
+			sr.WriteLine("\t@echo \"https://ip_address_of_the_vpn_server:5555/\"");
+#endif
+			sr.WriteLine("\t@echo");
+			sr.WriteLine("\t@echo \"This HTML5 page is obviously under construction, and your HTML5 development contribution is very appreciated.\"");
+			sr.WriteLine("\t@echo");
 
 			sr.WriteLine("\t@echo \"--------------------------------------------------------------------\"");
 			sr.WriteLine("\t@echo");
@@ -948,6 +970,9 @@ namespace BuildUtil
 			includes.Add("./Cedar/");
 			includes.Add("./Mayaqua/");
 
+			// Generate the PIE code by default
+			options.Add("-fPIE");
+
 			// Determine options
 			if (debugMode)
 			{
@@ -957,6 +982,7 @@ namespace BuildUtil
 			{
 				options.Add("-O2");
 			}
+
 			options.Add("-fsigned-char");
 			if (this.NoPThreadOption == false)
 			{
@@ -1025,11 +1051,11 @@ namespace BuildUtil
 				options.Add("-lrt");
 				options.Add("-lnsl");
 				options.Add("-lsocket");
-				options.Add("-ldl");
+				//options.Add("-ldl");
 			}
 			else if (this.Os == OSList.Linux)
 			{
-				options.Add("-ldl");
+				//options.Add("-ldl");
 				options.Add("-lrt");
 			}
 			else if (this.Os == OSList.MacOS)
@@ -1051,6 +1077,12 @@ namespace BuildUtil
 			options.Add("-lpthread");
 
 			gccOptionForLink = MakeGccOptions(new string[0], new string[0], options.ToArray(), libs.ToArray());
+
+			if (this.Os == OSList.Linux || this.Os == OSList.Solaris)
+			{
+				// Add the "-ldl" flag on the end of the command line
+				gccOptionForLink += " -ldl";
+			}
 		}
 
 		public static string MakeGccOptions(string[] macros, string[] includeDirs, string[] options, string[] libs)
